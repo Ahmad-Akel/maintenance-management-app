@@ -6,13 +6,9 @@ import ViewImageScreen from "./app/components/ViewImageScreen";
 import WelcomeScreen from "./app/components/WelcomeScreen";
 import AppButton from "./app/components/AppButton";
 import ServiceOrder from "./app/components/ServiceOrder";
+import ServiceOrderDetails from "./app/components/ServiceOrderDetails";
 export default function App() {
-  return (
-    <ViewImageScreen />
-    // <View style={{ backgroundColor: "#f8f4f4", padding: 20, paddingTop: 100 }}>
-    //   {/* <ServiceOrder title="Movile Maintenence" customer identification="Ahmad" location="Portugal" date="1.7.2021" time="25"/> */}
-    // </View>
-  );
+  return <ServiceOrderDetails />;
 }
 
 const styles = StyleSheet.create({
