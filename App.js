@@ -7,8 +7,9 @@ import WelcomeScreen from "./app/components/WelcomeScreen";
 import AppButton from "./app/components/AppButton";
 import ServiceOrder from "./app/components/ServiceOrder";
 import ServiceOrderDetails from "./app/components/ServiceOrderDetails";
+import Regform from "./app/components/Regform";
 export default function App() {
-  return <ServiceOrderDetails />;
+  return <Regform/>;
 }
 
 const styles = StyleSheet.create({
