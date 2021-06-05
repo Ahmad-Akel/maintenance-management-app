@@ -8,8 +8,14 @@ import AppButton from "./app/components/AppButton";
 import ServiceOrder from "./app/components/ServiceOrder";
 import ServiceOrderDetails from "./app/components/ServiceOrderDetails";
 import Regform from "./app/components/Regform";
+import MessagesScreen from "./app/components/MessagesScreen";
+import Screen from  "./app/components/Screen";
+import Icon from "./app/components/Icon";
+import ListItems from "./app/components/ListItems";
+import AccountScreen from "./app/components/AccountScreen";
+import ServicesScreen from "./app/components/ServicesScreen";
 export default function App() {
-  return <Regform/>;
+  return <MessagesScreen/>;
 }
 
 const styles = StyleSheet.create({

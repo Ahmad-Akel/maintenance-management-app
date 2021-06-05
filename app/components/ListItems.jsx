@@ -1,40 +1,47 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableHighlight } from "react-native";
 import colors from "../config/colors";
-const ListItems = ({ image, title, subTitle }) => {
+import Swipeable from 'react-native-gesture-handler/Swipeable';
+const ListItems = ({ image, title, subTitle,IconComponent,onPress,renderRightActions}) => {
   return (
+    <Swipeable renderRightActions={renderRightActions}>
+    <TouchableHighlight underlayColor={colors.light} onPress={onPress} >
     <View style={styles.container}>
-      <Image style={styles.image} source={image} />
+      {IconComponent}
+     {image&& <Image style={styles.image} source={image} />}
       <View style={styles.textContainer}>
         <Text style={styles.title}>{title}</Text>
-        <Text style={styles.subTitle}>{subTitle}</Text>
+       {subTitle&& <Text style={styles.subTitle}>{subTitle}</Text>}
       </View>
     </View>
+    </TouchableHighlight>
+    </Swipeable>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    marginTop: 30,
+   padding:15,
+   backgroundColor:colors.white,
   },
   image: {
     width: 70,
     height: 70,
     borderRadius: 35,
     marginRight: 15,
-    marginLeft: 7,
   },
-  //   textContainer: {
-  //     marginTop: 15,
-  //   },
+   textContainer: {
+    marginLeft: 10,
+    justifyContent:"center",
+   },
   title: {
     marginBottom: 5,
-    fontSize: 17,
+    fontSize: 14,
     fontWeight: "bold",
   },
   subTitle: {
-    fontSize: 15,
+    fontSize: 12,
     color: colors.medium,
   },
 });

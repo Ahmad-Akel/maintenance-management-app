@@ -26,13 +26,14 @@ const Regform = (regform,textinput,button,btntext) => {
     }
       ,
       header:{
-          fontsize:24,
+          //fontSize:24,
           fontWeight:'bold',
           color:'black',
           paddingBottom:10,
-          marginBottomColor:40,
+         // marginBottomColor:40,
           borderBottomColor:'#199187',
           borderBottomWidth:1
+      
 
       },
       textinput:{
@@ -55,7 +56,7 @@ const Regform = (regform,textinput,button,btntext) => {
     btntext:{
         color:'#fff',
         fontWeight:'bold',
-        fontsize:'24'
+       // fontsize:'24'
     }
   });
 
