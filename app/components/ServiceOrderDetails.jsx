@@ -1,11 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import ListItems from "./lists/ListItems";
-const ServiceOrderDetails = (props) => {
+const ServiceOrderDetails = ({route}) => {
+  const listing=route.params;
   return (
     <View>
-      <Image style={styles.image} source={require("../assets/service1.jpg")} />
-      <Text style={styles.title}>Service 1</Text>
+      <Image style={styles.image} source={listing.image} />
+      <Text style={styles.title}>{listing.title}</Text>
       <View style={{ flexDirection: "row" }}>
         <View>
           <Text style={styles.details}>name: Ahmad</Text>
@@ -16,7 +17,7 @@ const ServiceOrderDetails = (props) => {
           <Text style={styles.details}>date: 1.3.2021 </Text>
           <Text style={styles.details}>Time: 14:30 </Text>
         </View>
-      </View>
+      </View> 
       <View style={styles.userContainer}>
         <ListItems
           image={require("../assets/jack.jpg")}

@@ -3,7 +3,8 @@ import { StyleSheet, Text, View,FlatList } from 'react-native'
 import Screen from "../components/Screen";
 import Card from "../components/Card";
 import colors from "../config/colors";
-export default function ServicesScreen() {
+import routes from "../navigation/routes";
+export default function ServicesScreen({navigation}) {
     const services=[
         {
           id:1,
@@ -35,6 +36,7 @@ export default function ServicesScreen() {
             title={item.title} 
             subTitle={"$"+item.price}
             image={item.image}
+            onPress={()=>navigation.navigate(routes.LISTING_DETAILS,item)}
             />}/>
       </Screen>
     )

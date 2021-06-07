@@ -1,8 +1,9 @@
 import React from 'react'
-import { StyleSheet, Text, View,Image} from 'react-native'
+import { StyleSheet, Text, View,Image, TouchableWithoutFeedback} from 'react-native'
 import colors from "../config/colors";
-export default function Card({title,subTitle,image}) {
+export default function Card({title,subTitle,image,onPress}) {
     return (
+        <TouchableWithoutFeedback onPress={onPress}>
         <View style={styles.card}>
             <Image style={styles.image} source={image}/>
             <View style={styles.detailscontainer}>
@@ -11,6 +12,7 @@ export default function Card({title,subTitle,image}) {
             </View>
            
         </View>
+        </TouchableWithoutFeedback>
     )
 }
 
