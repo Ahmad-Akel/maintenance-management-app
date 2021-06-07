@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
-import ListItems from "./ListItems";
+import ListItems from "./lists/ListItems";
 const ServiceOrderDetails = (props) => {
   return (
     <View>

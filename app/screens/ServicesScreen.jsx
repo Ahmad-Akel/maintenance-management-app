@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View,FlatList } from 'react-native'
-import Screen from "./Screen";
-import Card from "./Card";
+import Screen from "../components/Screen";
+import Card from "../components/Card";
 import colors from "../config/colors";
 export default function ServicesScreen() {
     const services=[

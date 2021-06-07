@@ -1,7 +1,7 @@
 import React from "react";
 import { ImageBackground, Text, View, Image, StyleSheet } from "react-native";
 import colors from "../config/colors";
-import AppButton from "./AppButton";
+import AppButton from "../components/AppButton";
 const WelcomeScreen = () => {
   return (
     <View style={{ flex: 1 }}>
